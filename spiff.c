@@ -172,9 +172,6 @@ char *from;
 **	both work when SETPTR is used. 
 */
 #define SETPTR	{if(strlen(argv[1]) == 2) {argv++;argc--;ptr=argv[1];}else ptr=(&argv[1][2]);}
-#ifndef __hpux
-static 
-#endif
 void
 _Y_doargs(argc,argv,file1,file2,max_d)
 int argc;

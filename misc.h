@@ -33,17 +33,6 @@ extern char Z_err_buf[];
 #define Z_ALLOC(n,type)	((type*) _Z_myalloc((n) * sizeof (type)))
 extern int *_Z_myalloc();
 
-/*
-**	lines needed to shut up lint
-*/
-#ifndef __hpux
-extern char *sprintf();
-extern char *strcat();
-extern char *strncat();
-extern char *strcpy();
-extern char *strncpy();
-extern char *malloc();
-#endif
 extern void Z_complain();
 extern void Z_fatal();
 extern void Z_exceed();

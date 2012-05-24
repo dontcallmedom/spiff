@@ -172,17 +172,16 @@ C_clear_cmd()
 }
 
 int
-C_is_cmd(inline)
-char *inline;
+C_is_cmd(char *inlin)
 {
 	char *ptr;
 	/*
 	**	see if this is a command line
 	**	and if so, do the command right away
 	*/
-	if (('\0' != _C_cmdword[0]) && (!S_wordcmp(inline,_C_cmdword)))
+	if (('\0' != _C_cmdword[0]) && (!S_wordcmp(inlin,_C_cmdword)))
 	{
-		ptr = inline;
+		ptr = inlin;
 		S_nextword(&ptr);
 		_C_do_a_cmd(ptr);
 		return(1);

@@ -46,9 +46,6 @@ int a,b,flags;
 /*
 **	same as strcmp() except that case can be optionally ignored
 */
-#ifndef __hpux
-static 
-#endif
 int
 _X_strcmp(s1,s2,flags)
 char *s1,*s2;
@@ -86,9 +83,6 @@ int flags;
 /*
 **	routine to compare two tokens
 */
-#ifndef __hpux
-static 
-#endif
 int
 _X_cmptokens(p1,p2,flags)
 K_token p1, p2;
@@ -119,9 +113,6 @@ int flags;
 /*
 **	compare two F_floats using a tolerance
 */
-#ifndef __hpux
-static 
-#endif
 int
 _X_floatdiff(p1,p2,the_tol)
 F_float p1,p2;
