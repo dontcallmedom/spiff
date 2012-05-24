@@ -1,0 +1,52 @@
+HP-UX maree B.10.20 A 9000/715 2016696224 two-user license
+
+URL:
+====
+
+
+HP Porting Changes:
+===================
+  Configuration Files changed
+  ----------------------------
+
+  Makefile - Added an install Rule.
+
+
+  Source warnings/errors fixed
+  ----------------------------
+    
+    misc.h - Several String function definitions #ifndef'd
+    spiff.c - Inconsistent type declarations #ifndef'd
+    compare.c  -  Inconsistent type declarations #ifndef'd
+
+Building:
+=========
+
+  Run "make" in the top level dir.
+
+  Use "make -n install" to check the defaults, then "make install"
+
+
+Using:
+======
+  
+   Try ...
+
+	% spiff -e -d -t Sample.1 Sample.2
+     
+  It dies rather sadly if the two files are non-similar ...
+
+ 	% spiff -2000 -t README READ_ME          ## OK
+  	% spiff -2500 -t README READ_ME          ## Coredump
+      
+
+Installed:
+==========
+ By
+ --     [steff@csc.liv.ac.uk]
+ On
+ --	[Fri  3 Apr 1998]
+ 
+ 
+       HPUX Porting and Archive Centre, Connect, Liverpool University.
+  __/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/__/

@@ -1,0 +1,30 @@
+rom: rsalz@uunet.uu.net (Rich Salz)
+Newsgroups: comp.sources.unix
+Subject: v16i067:  Spiff, find approximate differences in files, Part01/04
+Message-ID: <1182@papaya.bbn.com>
+Date: 11 Nov 88 18:18:05 GMT
+Approved: rsalz@uunet.UU.NET
+
+Submitted-by: Daniel W Nachbar <daniel@wind.bellcore.com>
+Posting-number: Volume 16, Issue 67
+Archive-name: spiff/part01
+
+[  This is the program Dan presented at his \fIexcellent\fP talk at
+   SF Usenix.  For those who weren't there, yes, Spiff is named after
+   the comic strip character in Calvin and Hobbes.  The "MGR" window
+   system mentioned in the README will be appearing here shortly.  I
+   repacked this submission.  --r ]
+
+The well known program diff is inappropriate for some common tasks such as
+comparing the output of floating point calculations where roundoff errors
+lead diff astray and comparing program source code where some differences
+in the text (such as white space and comments) have no effect on the
+operation of the compiled code. A new program, named spiff, addresses
+these and other similar cases by lexical parsing of the input files and
+then applying a differencing algorithm to the token sequences. Spiff
+ignores differences between floating point numbers that are below a user
+settable tolerance.  Other features include user settable commenting and
+literal string conventions and a choice of differencing algorithm. There
+is also an interactive mode wherein the input texts are displayed with
+differences highlighted. The user can change numeric tolerances "on the
+fly" and spiff will adjust the highlighting accordingly.

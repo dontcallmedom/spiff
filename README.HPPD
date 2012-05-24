@@ -1,0 +1,18 @@
+Package name:     spiff
+Version number:   1.0
+Original author:  Daniel W Nachbar <daniel@wind.bellcore.com>
+Original URL:     ftp://ftp.lth.se/pub/usenet/comp.sources.unix/volume16
+HP-UX URL:        http://hpux.connect.org.uk/hppd/cgi-bin/search?package=&term=spiff-
+Install tree:     /opt/spiff
+Report bugs to:   steff@connect.org.uk
+Tested on:        HP 9000/780/C160 running HP-UX 11.00
+C compiler used:  Version A.11.01.02
+Purpose:
+A new version of diff adapted for source code. The well known program diff is
+inappropriate for some common tasks such as comparing the output of floating
+oint calculations where roundoff errors lead diff astray and comparing program
+source code where some differences in the text (such as white space and
+comments) have no effect on the operation of the compiled code. Spiff addresses
+these cases.
+Date archived:    Wed  1 Dec 1999
+Special notes:    Read HPUX.Install for further info.
