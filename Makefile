@@ -79,7 +79,7 @@ HFILES=misc.h strings.h line.h float.h floatrep.h tol.h command.h comment.h toke
 OTHER=README Makefile Sample.1 Sample.2 Sample.3 Sample.4 paper.ms paper.out
 MANPAGE=spiff.1
 
-CFLAGS= $(OSFLAG) $(TFLAG) $(VISFLAG)
+CFLAGS= $(OSFLAG) $(TFLAG) $(VISFLAG) -DNOCHATTER
 
 default: spiff
 
@@ -94,7 +94,7 @@ visual.o: visual.c misc.h visual.h $(MGRINCS)
 misc.o: misc.c visual.h misc.h
 
 parse.o:  parse.c misc.h line.h command.h float.h tol.h comment.h parse.h token.h flagdefs.h
-	@echo compiler may report 4 statement not reached warning messages for parse.c
+#	@echo compiler may report 4 statement not reached warning messages for parse.c
 	$(CC) $(CFLAGS) -c parse.c
 
 command.o: command.c float.h tol.h misc.h
@@ -106,7 +106,7 @@ tol.o: tol.c tol.h float.h
 output.o: output.c output.h misc.h edit.h flagdefs.h
 
 compare.o: compare.c misc.h strings.h float.h tol.h token.h line.h compare.h flagdefs.h
-	@echo compiler may report 1 statement not reached warning message for compare.c
+#	@echo compiler may report 1 statement not reached warning message for compare.c
 	$(CC) $(CFLAGS) -c compare.c
 
 float.o: float.c misc.h strings.h float.h floatrep.h

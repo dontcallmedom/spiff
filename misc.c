@@ -12,6 +12,7 @@ static char rcsid[]= "$Header: misc.c,v 1.1 88/09/15 11:34:01 daniel Rel $";
 #endif
 
 #include <stdio.h>
+#include <stdlib.h>
 #include "misc.h"
 #include "visual.h"
 #include "output.h"

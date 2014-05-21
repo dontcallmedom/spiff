@@ -12,6 +12,7 @@ static char rcsid[]= "$Header: output.c,v 1.1 88/09/15 11:33:52 daniel Rel $";
 #endif
 
 #include <stdio.h>
+#include <stdlib.h>
 
 #ifdef M_TERMINFO
 #include <curses.h>

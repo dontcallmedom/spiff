@@ -64,13 +64,10 @@ _P_alpha_clear()
 	*_P_alpha = '\0';
 }
 
-static
+static char *
 _P_in_alpha(chr)
 char chr;
 {
-#ifndef ATT
-	extern int index();
-#endif
 	/*
 	**	special case when string terminator
 	**	is handed to us
@@ -78,11 +75,7 @@ char chr;
 	if ('\0' == chr)
 		return(0);
 
-#ifdef ATT
-	return((int) strchr(_P_alpha,chr));
-#else
-	return((int) index(_P_alpha,chr));
-#endif
+	return strchr(_P_alpha,chr);
 }
 
 void
