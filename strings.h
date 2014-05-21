@@ -6,6 +6,9 @@
 **       BELLCORE MAKES NO WARRANTY AND ACCEPTS NO LIABILITY FOR THIS PROGRAM.
 */
 
+#include <string.h>
+#include <stdio.h>
+
 #ifndef S_INCLUDED
 extern void S_wordcpy();
 extern void S_skipword();
