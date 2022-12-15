@@ -1,0 +1,18 @@
+cc=cl
+link=link
+
+.c.obj::
+  $(cc) -DNOCHATTER -c $<
+
+OBJECTS = spiff.obj output.obj compare.obj float.obj strings.obj exact.obj \
+          miller.obj parse.obj command.obj comment.obj tol.obj line.obj \
+          token.obj floatrep.obj misc.obj visual.obj
+
+spiff.exe: $(OBJECTS) 
+  $(link) -out:spiff.exe $(OBJECTS)
+
+clean:
+  @ if exist *.obj \
+    @ del /Q *.obj \
+  @ if exist *.exe \
+    @ del /Q *.exe
