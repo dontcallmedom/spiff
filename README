@@ -34,7 +34,7 @@ INSTALLATION
 		like change the commenting convention and tolerances on the
 		fly.  Be sure to run the command with the -s option to spiff:
 
-			spiff -s 'command spiffword' Sample.3 Sample.4
+			spiff -s "command spiffword" Sample.3 Sample.4
 
 		These files by no means provide an exhaustive test of
 		spiff's features. But they should give you some idea if things
