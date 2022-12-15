@@ -58,6 +58,7 @@ _O_st_init()
 		return;
 	}
 
+#if !defined(_WIN32)
 	if (NULL == (_O_st_tmp = (char*) getenv("TERM")))
 	{
 		Z_complain("can't find TERM entry in environment\n");
@@ -66,6 +67,7 @@ _O_st_init()
 		return;
 	}
 	(void) strcpy(termn,_O_st_tmp);
+#endif
 
 #ifdef M_TERMCAP
 	if (1 != tgetent(entry,termn))
